@@ -8,6 +8,34 @@ Primary source-of-truth file:
 
 - [`src/data/venues.json`](/home/zdj/.openclaw/workspace/roboddl/src/data/venues.json)
 
+## Project structure
+
+- Data file: [`src/data/venues.json`](/home/zdj/.openclaw/workspace/roboddl/src/data/venues.json)
+- Venue normalization logic: [`src/data/conferences.ts`](/home/zdj/.openclaw/workspace/roboddl/src/data/conferences.ts)
+- Time conversion helpers: [`src/utils/dateUtils.ts`](/home/zdj/.openclaw/workspace/roboddl/src/utils/dateUtils.ts)
+- Main page: [`src/App.tsx`](/home/zdj/.openclaw/workspace/roboddl/src/App.tsx)
+
+## Local development
+
+Install dependencies and start the dev server:
+
+```bash
+npm install
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
 ## Before you open a PR
 
 - Keep the change focused

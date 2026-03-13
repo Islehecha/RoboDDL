@@ -4,47 +4,25 @@ RoboDDL is a deadline tracker for robotics conferences and strong journals. It i
 
 Contribution and collaboration guidelines live in [`CONTRIBUTING.md`](/home/zdj/.openclaw/workspace/roboddl/CONTRIBUTING.md).
 
-## What the site includes
+## Highlights
 
-- Conference deadline tracking for ICRA, IROS, RSS, CoRL, ICML, NeurIPS, ICLR, AAAI, and AAMAS
-- Journal tracking for Science Robotics, T-RO, IJRR, RA-L, T-ASE, and T-FR
-- AoE-normalized deadline display and countdowns
-- Estimated deadlines when a new official paper deadline has not been announced yet
-- Venue filters for `Conference` and `Journal`
-- One-click follow for venues with local persistence and favorite-first sorting
-- A month-by-month submission overview for upcoming conference deadlines
-- Journal-specific rating display using `CCF / CAAI / CAS / JCR` when available
+- 🤖 Conference deadline tracking for ICRA, IROS, RSS, CoRL, ICML, NeurIPS, ICLR, AAAI, and AAMAS
+- 📚 Journal tracking for Science Robotics, T-RO, IJRR, RA-L, T-ASE, and T-FR
+- ⏳ AoE-normalized deadline display and countdowns
+- 🧭 Estimated deadlines when a new official paper deadline has not been announced yet
+- 🔎 Venue filters for `Conference` and `Journal`
+- ⭐ One-click follow with local persistence and favorite-first sorting
+- 🗓️ A month-by-month submission overview for upcoming conference deadlines
+- 📊 Journal-specific rating display using `CCF / CAAI / CAS / JCR` when available
 
-## Project structure
+## Data
 
-- Data file: [`src/data/venues.json`](/home/zdj/.openclaw/workspace/roboddl/src/data/venues.json)
-- Venue normalization logic: [`src/data/conferences.ts`](/home/zdj/.openclaw/workspace/roboddl/src/data/conferences.ts)
-- Time conversion helpers: [`src/utils/dateUtils.ts`](/home/zdj/.openclaw/workspace/roboddl/src/utils/dateUtils.ts)
-- Main page: [`src/App.tsx`](/home/zdj/.openclaw/workspace/roboddl/src/App.tsx)
-
-## Local development
-
-Install dependencies and start the dev server:
-
-```bash
-npm install
-npm run dev
-```
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
+- The source-of-truth data file is [`src/data/venues.json`](/home/zdj/.openclaw/workspace/roboddl/src/data/venues.json)
+- Conference venues use official deadlines when available, otherwise the site estimates the next cycle from the latest known paper deadline
+- Journal venues are shown as rolling-submission targets with rating metadata when available
 
 ## Notes
 
-- All displayed deadlines are normalized to AoE
-- If a future deadline is not officially available, the site estimates it from the latest known paper deadline
-- Some journal ratings may remain `N/A` when the venue is not clearly listed in the public source used by the project
+- 🌍 All displayed deadlines are normalized to AoE
+- 🛠️ Most updates should only require editing the JSON data file
+- 🧪 Development workflow, project structure, Issue guide, and PR guide live in [`CONTRIBUTING.md`](/home/zdj/.openclaw/workspace/roboddl/CONTRIBUTING.md)
