@@ -5,6 +5,7 @@ import { VenueView } from '../data/conferences';
 interface SubmissionCalendarProps {
   venues: VenueView[];
   now: Date;
+  favoriteVenueIds: string[];
 }
 
 interface MonthBucket {
@@ -45,7 +46,7 @@ function getDeadlineDay(venue: VenueView) {
   return day;
 }
 
-function SubmissionCalendar({ venues, now }: SubmissionCalendarProps) {
+function SubmissionCalendar({ venues, now, favoriteVenueIds }: SubmissionCalendarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const conferenceVenues = venues.filter((venue) => {
     return (
@@ -92,7 +93,14 @@ function SubmissionCalendar({ venues, now }: SubmissionCalendarProps) {
               {month.venues.length > 0 ? (
                 <div className="calendar-list">
                   {month.venues.map((venue) => (
-                    <div key={venue.id} className="calendar-item">
+                    <div
+                      key={venue.id}
+                      className={
+                        favoriteVenueIds.includes(venue.id)
+                          ? 'calendar-item calendar-item-following'
+                          : 'calendar-item'
+                      }
+                    >
                       <span>{venue.title}</span>
                       <span>
                         {venue.countdownLabel === 'Abstract deadline' ? 'Abs.' : 'Paper'} {getDeadlineDay(venue)}

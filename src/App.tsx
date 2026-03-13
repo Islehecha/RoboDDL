@@ -219,7 +219,7 @@ function App() {
           </div>
         </section>
 
-        <SubmissionCalendar venues={filteredVenues} now={currentTime} />
+        <SubmissionCalendar venues={filteredVenues} now={currentTime} favoriteVenueIds={favoriteVenueIds} />
 
         <section className="stats-grid">
           <button

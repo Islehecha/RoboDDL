@@ -1,6 +1,6 @@
 # RoboDDL
 
-> Helping robotics researchers track conference and journal deadlines through collaboration.
+> Helping robotics researchers track conference deadlines through collaboration.
 
 [![LICENSE](https://img.shields.io/github/license/RoboDDL/RoboDDL)](./LICENSE)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/RoboDDL/RoboDDL/.github/workflows/deploy.yml?branch=main)](https://github.com/RoboDDL/RoboDDL/actions/workflows/deploy.yml)
@@ -13,8 +13,7 @@ If you're comfortable making code or data changes, PRs are very welcome. If not,
 
 ## Highlights
 
-- 🤖 Conference deadline tracking for ICRA, IROS, RSS, CoRL, ICML, NeurIPS, ICLR, AAAI, and AAMAS
-- 📚 Journal tracking for Science Robotics, T-RO, IJRR, RA-L, T-ASE, and T-FR
+- 🤖 Conference deadline tracking and a recommended journal list
 - ⏳ AoE-normalized deadline display and countdowns
 - 🧭 Estimated deadlines when a new official paper deadline has not been announced yet
 - 🔎 Venue filters for `Conference` and `Journal`

@@ -177,9 +177,17 @@ a {
     @apply flex items-center justify-between gap-3 rounded-xl bg-white px-3 py-2 text-sm text-slate-700;
   }
 
+  .calendar-item-following {
+    @apply border border-amber-200 bg-amber-50 text-slate-900;
+  }
+
   .calendar-item span:last-child {
     font-family: 'IBM Plex Mono', 'SFMono-Regular', monospace;
     @apply text-xs text-slate-500;
+  }
+
+  .calendar-item-following span:last-child {
+    @apply text-amber-700;
   }
 
   .calendar-empty {
