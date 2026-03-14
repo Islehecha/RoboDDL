@@ -36,10 +36,10 @@ npm -v
 
 ### 3. Clone the repository
 
-If you plan to contribute from your own GitHub account, fork the repository first, then clone your fork. If you already have direct access, you can clone the main repo directly.
+Before contributing, please **Fork** this repository to your own GitHub account. Then clone your fork and make changes there.
 
 ```bash
-git clone https://github.com/RoboDDL/RoboDDL.git
+git clone https://github.com/USERNAME/RoboDDL.git
 cd RoboDDL
 ```
 
@@ -58,6 +58,8 @@ npm run dev
 Vite will print a local URL such as `http://localhost:5173`. Open it in your browser.
 
 ### 6. Before opening a PR
+
+Please confirm you are opening the PR from your forked repository.
 
 Make sure the project still builds successfully:
 
@@ -89,9 +91,10 @@ npm run build
 
 ## Quick workflow
 
-1. Identify which contribution type your change belongs to.
-2. Update the relevant files.
-3. Verify sources or behavior.
+1. Fork this repository.
+2. Identify which contribution type your change belongs to.
+3. Update the relevant files in your fork.
+4. Verify sources or behavior.
 4. Run:
 
 ```bash
@@ -100,7 +103,7 @@ npm run build
 ```
 
 5. If you changed the UI, also check desktop and a narrow mobile viewport.
-6. Open a PR or issue with enough context for review.
+6. Open a PR from your fork with enough context for review.
 
 
 ## What to edit
