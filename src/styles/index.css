@@ -185,19 +185,36 @@ a {
   }
 
   .calendar-toggle {
-    @apply flex w-full items-start justify-between gap-4 text-left;
+    @apply flex w-full items-center justify-between gap-4 text-left;
+  }
+
+  .calendar-toggle.open {
+    @apply items-start;
   }
 
   .calendar-head h2 {
     @apply text-xl font-semibold text-slate-950;
   }
 
+  .calendar-title {
+    @apply text-xl font-semibold text-slate-950;
+  }
+
+  .calendar-title span {
+    @apply inline-flex rounded-full border border-amber-200 bg-gradient-to-r from-amber-100 via-amber-50 to-white px-3 py-1 text-slate-950 shadow-sm;
+    box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.12), 0 10px 24px -18px rgba(217, 119, 6, 0.9);
+  }
+
   .calendar-note {
-    @apply mt-1 max-w-xl text-sm text-slate-500;
+    @apply mt-1 max-w-xl pl-3 text-sm text-slate-500;
   }
 
   .calendar-chevron {
-    @apply mt-1 h-5 w-5 flex-shrink-0 text-slate-500 transition-transform;
+    @apply h-5 w-5 flex-shrink-0 self-center text-slate-500 transition-transform;
+  }
+
+  .calendar-toggle.open .calendar-chevron {
+    @apply mt-1 self-start;
   }
 
   .calendar-chevron.open {

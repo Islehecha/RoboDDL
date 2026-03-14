@@ -74,10 +74,16 @@ function SubmissionCalendar({ venues, now, favoriteVenueIds }: SubmissionCalenda
 
   return (
     <section className="calendar-card">
-      <button type="button" className="calendar-toggle" onClick={() => setIsOpen((open) => !open)}>
+      <button
+        type="button"
+        className={isOpen ? 'calendar-toggle open' : 'calendar-toggle'}
+        onClick={() => setIsOpen((open) => !open)}
+      >
         <div>
-          <h2>Monthly Overview</h2>
-          <p className="calendar-note">What can you submit each month?</p>
+          <h2 className="calendar-title">
+            <span>Monthly Overview</span>
+          </h2>
+          {isOpen ? <p className="calendar-note">What can you submit each month?</p> : null}
         </div>
         <ChevronDown className={isOpen ? 'calendar-chevron open' : 'calendar-chevron'} />
       </button>
