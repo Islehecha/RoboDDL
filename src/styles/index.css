@@ -289,7 +289,7 @@ a {
   }
 
   .control-card {
-    @apply self-start p-4 xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)] xl:overflow-y-auto;
+    @apply self-start overflow-visible p-4 xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)] xl:overflow-visible;
   }
 
   .filter-title {
@@ -300,12 +300,48 @@ a {
     @apply flex flex-wrap gap-2;
   }
 
+  .filter-chip-help {
+    @apply relative inline-flex;
+  }
+
   .filter-chip {
     @apply rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-600 transition;
   }
 
+  .filter-chip-with-help {
+    @apply inline-flex items-center gap-1.5 pr-3;
+  }
+
+  .filter-chip-label {
+    @apply leading-none;
+  }
+
   .filter-chip.active {
     @apply border-slate-950 bg-slate-950 text-white;
+  }
+
+  .filter-chip-help-icon {
+    @apply inline-flex h-4 w-4 items-center justify-center rounded-full border border-slate-300 text-slate-500;
+  }
+
+  .filter-chip-help-popover {
+    @apply pointer-events-none absolute left-1/2 top-full z-10 mt-2 w-64 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-xl border border-slate-200 bg-white p-3 text-left text-xs leading-5 text-slate-600 opacity-0 shadow-lg transition;
+  }
+
+  .filter-chip-help-popover.open {
+    @apply pointer-events-auto opacity-100;
+  }
+
+  .filter-chip-help-popover p {
+    @apply m-0;
+  }
+
+  .filter-chip-help-popover a {
+    @apply mt-2 inline-flex font-medium text-slate-900 underline decoration-slate-300 underline-offset-2 transition hover:text-slate-700;
+  }
+
+  .filter-chip-help .filter-chip.active .filter-chip-help-icon {
+    @apply border-white/20 text-white;
   }
 
   .favorite-toggle {
@@ -646,7 +682,11 @@ a {
 :root[data-theme='dark'] .rolling-panel strong,
 :root[data-theme='dark'] .countdown-grid strong,
 :root[data-theme='dark'] .page-footer a,
-:root[data-theme='dark'] .source-strip a {
+:root[data-theme='dark'] .source-strip a,
+:root[data-theme='dark'] .filter-chip-help-popover a,
+:root[data-theme='dark'] .filter-chip-help-popover a:visited,
+:root[data-theme='dark'] .live-help-popover a,
+:root[data-theme='dark'] .live-help-popover a:visited {
   color: #f8fafc;
 }
 
@@ -672,12 +712,14 @@ a {
 :root[data-theme='dark'] .page-footer,
 :root[data-theme='dark'] .results-chips,
 :root[data-theme='dark'] .live-help-popover,
+:root[data-theme='dark'] .filter-chip-help-popover,
 :root[data-theme='dark'] .summary-deadline span {
   color: #94a3b8;
 }
 
 :root[data-theme='dark'] .hero-panel,
 :root[data-theme='dark'] .live-help-popover,
+:root[data-theme='dark'] .filter-chip-help-popover,
 :root[data-theme='dark'] .calendar-month,
 :root[data-theme='dark'] .favorite-toggle,
 :root[data-theme='dark'] .venue-expanded,
@@ -688,6 +730,14 @@ a {
 :root[data-theme='dark'] .source-strip {
   border-color: rgba(71, 85, 105, 0.4);
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.94));
+}
+
+:root[data-theme='dark'] .live-help-popover a:hover {
+  color: #cbd5e1;
+}
+
+:root[data-theme='dark'] .filter-chip-help-popover a:hover {
+  color: #cbd5e1;
 }
 
 :root[data-theme='dark'] .calendar-item,
@@ -717,6 +767,11 @@ a {
   border-color: rgba(71, 85, 105, 0.42);
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(17, 24, 39, 0.86));
   color: #dbe7f4;
+}
+
+:root[data-theme='dark'] .filter-chip-help-icon {
+  border-color: rgba(100, 116, 139, 0.45);
+  color: #cbd5e1;
 }
 
 :root[data-theme='dark'] .filter-chip:hover,

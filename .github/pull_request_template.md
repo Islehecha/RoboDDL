@@ -9,10 +9,6 @@
 - [ ] Feature requests
 - [ ] Others
 
-## Sources
-
-- Source URL 1:
-
 ## Checks
 
 - [ ] I kept the change focused
