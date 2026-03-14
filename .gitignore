@@ -15,3 +15,11 @@ pnpm-debug.log*
 .vite/
 coverage/
 *.tsbuildinfo
+.eslintcache
+*.swp
+*.swo
+
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.cache/
